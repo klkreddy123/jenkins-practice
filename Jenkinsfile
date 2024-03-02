@@ -25,6 +25,11 @@ pipeline {
             steps {
                 echo "Deploying"
                 //error "this is failure"
+                                sh '''
+                    ls -ltr
+                    pwd
+                    echo "Testing web hook event in deploying step"
+                '''
             }
         }
     }
