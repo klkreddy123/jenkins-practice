@@ -17,4 +17,17 @@ pipeline {
             }
         }
     }
+        post { 
+            always { 
+                echo 'I will always say run wether job is succes or not!'
+            }
+            succes {
+                echo 'I will run only on success!'    
+            }
+            failure {
+                echo 'I will run when failure'
+            }
+        }
+    }
+}
 }
