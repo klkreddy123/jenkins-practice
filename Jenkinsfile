@@ -14,6 +14,11 @@ pipeline {
         stage("Test") {
             steps {
                 echo "Testing"
+                sh '''
+                    ls -ltr
+                    pwd
+                    echo "Testing web hook event"
+                '''
             }
         }
         stage("Deploy") {
